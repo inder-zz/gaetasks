@@ -3,6 +3,7 @@
   "description": "Google App Engine Cloud Tasks example.",
   "license": "Apache-2.0",
   "author": "Google Inc.",
+  "version": "0.0.1",
   "private": true,
   "engines": {
     "node": ">=8"
