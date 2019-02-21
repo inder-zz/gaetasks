@@ -46,5 +46,4 @@ async function createQueue(
   console.log(`Created queue ${response.name}`);
 }
 
-const args = process.argv.slice(2);
-createQueue(...args).catch(console.error);
+exports.queue = createQueue
