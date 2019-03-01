@@ -18,8 +18,8 @@
  * Create a new Task Queue
  */
 async function createQueue(
-  project = 'my-project-id', // Your GCP Project id
-  queue = 'my-appengine-queue', // Name of the Queue to create
+  project, // Your GCP Project id
+  queue, // Name of the Queue to create
   location = 'us-central1' // The GCP region in which to create the queue
 ) {
   // Imports the Google Cloud Tasks library.

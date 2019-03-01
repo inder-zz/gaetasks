@@ -34,7 +34,7 @@ async function createTask(project, location, queue, options) {
   // const options = {payload: 'hello'};
 
   // Construct the fully qualified queue name.
-  const parent = client.queuePath(project, location, queue);
+  const parent = client.queuePath(project, location, queue, relative_uri='/push');
 
   const task = {
     appEngineHttpRequest: {
@@ -66,6 +66,8 @@ async function createTask(project, location, queue, options) {
   const name = response.name;
   console.log(`Created task ${name}`);
 
+  return response;
+  
   // [END cloud_tasks_appengine_create_task]
   // [END tasks_quickstart]
 }
