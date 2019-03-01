@@ -18,7 +18,7 @@
 /**
  * Create a task for a given queue with an arbitrary payload.
  */
-async function createTask(project, location, queue, options) {
+async function createTask(project, location, queue, options, relative_uri='/push') {
   // [START cloud_tasks_appengine_create_task]
   // [START tasks_quickstart]
   // Imports the Google Cloud Tasks library.
@@ -34,7 +34,7 @@ async function createTask(project, location, queue, options) {
   // const options = {payload: 'hello'};
 
   // Construct the fully qualified queue name.
-  const parent = client.queuePath(project, location, queue, relative_uri='/push');
+  const parent = client.queuePath(project, location, queue);
 
   const task = {
     appEngineHttpRequest: {
